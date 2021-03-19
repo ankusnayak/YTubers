@@ -75,8 +75,16 @@ WSGI_APPLICATION = 'tubers.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        #database engine that we changed from sqlite to postgresql
+        'ENGINE': 'django.db.backends.postgresql',
+        #database name that we created in postgresql instead of default one
+        'NAME': 'lcotubers',
+        #user means the owner of the database or user who can access it
+        'USER': 'postgres',
+        #master password or databse password that can give access to use the database
+        'PASSWORD': 'ankus7',
+        # name of the host who hosting the database
+        'HOST':'localhost',
     }
 }
 
