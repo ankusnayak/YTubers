@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # appname/apps.class name
+    'webpages.apps.WebpagesConfig',
     # we add a style for django admin pannel thats why install and register django cms style
     'djangocms_admin_style',
     'django.contrib.admin',
