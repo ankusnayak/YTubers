@@ -138,3 +138,6 @@ STATICFILES_DIRS = [
     # we mention all static files place in tubures/static
     os.path.join(BASE_DIR,'tubers/static')
 ]
+
+
+# collect static means collect the static files from specific path 
