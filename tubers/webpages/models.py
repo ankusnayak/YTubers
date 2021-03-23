@@ -11,7 +11,7 @@ class Slider(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     
     # this is used for string representation of the slider object so that when we add some object in admin pannel then it will show the specific string that represent the object of this class instead of "slider object"
-    # link = models.CharField(max_length=255, blank=True)
+    link = models.CharField(max_length=255, blank=True)
     
     def __str__(self):
         return self.headline
