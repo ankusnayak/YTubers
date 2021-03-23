@@ -1,7 +1,17 @@
 from django.shortcuts import render
+from .models import Slider
+
 # Create your views here.
+#these are all method based views
 def home(request):
-    return render(request,'webpages/home.html')
+    # get the data from database
+    # consume all the slider objects present in the database 
+    sliders = Slider.objects.all()
+    # now pass the array or list of object as a object form to the template 
+    data = {
+        'sliders':sliders
+    } 
+    return render(request,'webpages/home.html',data)
 def about(request):
     return render(request,'webpages/about.html')
 def services(request):
