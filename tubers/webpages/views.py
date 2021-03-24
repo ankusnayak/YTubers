@@ -1,5 +1,7 @@
 from django.shortcuts import render
-from .models import Slider,Team
+#import models from current directry
+from .models import Slider, Team
+from youtubers.models import Youtuber
 
 # Create your views here.
 #these are all method based views
@@ -7,11 +9,15 @@ def home(request):
     # get the data from database
     # consume all the slider objects present in the database 
     sliders = Slider.objects.all()
-    teams=Team.objects.all()
+    teams = Team.objects.all()
+    featured_youtubers = Youtuber.objects.order_by('-created_date').filter(is_featured=True)
+    all_tubers=Youtuber.objects.order_by('-created_date')
     # now pass the array or list of object as a object form to the template 
     data = {
         'sliders': sliders,
-        'teams':teams
+        'teams': teams,
+        'featured_youtubers': featured_youtubers,
+        'all_tubers':all_tubers
     } 
     return render(request,'webpages/home.html',data)
 def about(request):

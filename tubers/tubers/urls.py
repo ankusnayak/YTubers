@@ -20,5 +20,6 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     # no need to provide the name bcz these path actually calling another urls file
-    path('',include('webpages.urls'),),
+    path('', include('webpages.urls'),),
+    path('youtubers/',include('youtubers.urls'))
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

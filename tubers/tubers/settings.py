@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'youtubers.apps.YoutubersConfig',
     # appname/apps.class name
     'webpages.apps.WebpagesConfig',
     # we add a style for django admin pannel thats why install and register django cms style
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
