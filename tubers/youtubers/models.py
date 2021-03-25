@@ -28,6 +28,7 @@ class Youtuber(models.Model):
         ('gaming','gaming'),
         ('cooking','cooking'),
         ('academic','academic'),
+        ('educational','educational'),
     )
 
     name = models.CharField(max_length=255)

@@ -22,10 +22,9 @@
             <!-- person 1 -->
             <div class="card border-0 text-center">
               <div class="feature-text">
+              <a href="{%url 'youtubers_detail' tuber.id %}">
                 <img src="{{tuber.photo.url}}" class="card-img-top" alt="team-member">
-                <span class="text-left bg-accent font-weight-bold">
-                  Featured
-                </span>
+              <a/>  
               </div>
               <div class="card-body">
                 <h5 class="card-title">{{tuber.name}}</h5>

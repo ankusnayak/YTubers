@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Youtuber
+from django.shortcuts import get_object_or_404
 # Create your views here.
 def youtubers(request):
     #get all the tubers not featured_wise
@@ -13,6 +14,7 @@ def youtubers_detail(request,id):
     data = {
         'tuber':tuber,
     }
+    #it can response http response or render a template as response
     return render(request,'youtubers/youtubers_detail.html',data)
 def search(request):
     pass
