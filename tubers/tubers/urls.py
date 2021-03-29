@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # no need to provide the name bcz these path actually calling another urls file
     path('', include('webpages.urls'),),
-    path('youtubers/',include('youtubers.urls'))
+    path('youtubers/', include('youtubers.urls')),
+    path('accounts/',include('accounts.urls')),
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

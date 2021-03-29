@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts.apps.AccountsConfig',
     'youtubers.apps.YoutubersConfig',
     # appname/apps.class name
     'webpages.apps.WebpagesConfig',
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ckeditor',
+    
 ]
 
 MIDDLEWARE = [
