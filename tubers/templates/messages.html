@@ -1,0 +1,21 @@
+{% if messages %}
+
+    {% for message in messages %}
+        <div class="alert alert-{{message.tags}}" alert-dismissible  role="alert">
+            <strong>
+            <!--if error then error-->
+                {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                Error: 
+                <!--else message-->
+                {% else %}
+                <!--this pipe operator converts the string in uppercase char and remaining in tower case-->
+                {{message.tags | title}}
+                {% endif %}
+            </strong>
+            <!--then original message-->
+            {{ message }}
+            <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endfor %}
+
+{% endif %}

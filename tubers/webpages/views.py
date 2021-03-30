@@ -21,7 +21,11 @@ def home(request):
     } 
     return render(request,'webpages/home.html',data)
 def about(request):
-    return render(request,'webpages/about.html')
+    teams = Team.objects.order_by('-created_date')
+    data = {
+        'teams':teams
+    }
+    return render(request,'webpages/about.html',data)
 def services(request):
     return render(request,'webpages/services.html')
 def contact(request):
