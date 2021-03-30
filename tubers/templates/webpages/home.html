@@ -52,6 +52,7 @@
       <div class="team slider" data-slick='{"slidesToShow": 3, "slidesToScroll": 1}'>
       {% for fy in featured_youtubers %}
 
+        <a href="{%url 'youtubers_detail' fy.id %}">
         <!-- person 1 -->
         <div class="card border-0 text-center ml-3 mr-3">
           <div class="feature-text">
@@ -75,7 +76,7 @@
             </div>
           </div>
         </div>
-
+        </a>
 
         
       {% endfor %}
@@ -102,6 +103,7 @@
       <div class="tubers grid">
         <!-- person 1 -->
         {% for at in all_tubers %}
+        <a href="{% url 'youtubers_detail' at.id %}">
         <div class="card border-0 text-center">
           <div>
             <img src="{{at.photo.url}}" class="card-img-top" alt="team-member">
@@ -122,6 +124,7 @@
             </div>
           </div>
         </div>
+        </a>
         {% endfor %}
 
       </div>

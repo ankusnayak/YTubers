@@ -63,4 +63,5 @@ def register(request):
 #base_url/accounts/dashboard
 @login_required(login_url='login')    
 def dashboard(request):
+    messages.success(request,'Login successful')
     return render(request,'accounts/dashbaord.html')

@@ -8,7 +8,7 @@ class Hiretuber(models.Model):
     last_name = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
     
-    interested_in=models.TextField(blank=True)
+    
 
     tuber_id=models.IntegerField()
     tuber_name=models.CharField(max_length=100)
